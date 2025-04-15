@@ -17,6 +17,11 @@ if not API_KEY:
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
+
+@app.route('/')
+def index():
+    return 'The API is working'
+
 @app.route('/api/weather', methods=['GET'])
 def get_weather():
     print("Received request for weather data")
