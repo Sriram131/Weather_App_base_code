@@ -8,7 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)
 # Update CORS for production
-CORS(app, resources={r"/api/*": {"origins": ["https://weather-app-base-code.vercel.app/", "http://localhost:3000"]}})
+CORS(app, resources={r"/api/*": {"origins": ["https://weather-app-base-code.vercel.app", "http://localhost:3000"]}})
 
 # Get API key from environment variable
 API_KEY = os.getenv('OPENWEATHER_API_KEY')
